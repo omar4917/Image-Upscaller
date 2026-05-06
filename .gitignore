@@ -1,0 +1,9 @@
+venv/
+__pycache__/
+engine/
+"Video Project/"
+*.jpg
+*.png
+*.webp
+*.mp4
+*.log
