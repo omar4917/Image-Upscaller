@@ -4,9 +4,16 @@ import requests
 import subprocess
 import threading
 import re
+import sys
+
+# Support PyInstaller frozen path
+if getattr(sys, 'frozen', False):
+    SCRIPT_DIR = os.path.dirname(sys.executable)
+else:
+    SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 
 ENGINE_URL = "https://github.com/xinntao/Real-ESRGAN/releases/download/v0.2.5.0/realesrgan-ncnn-vulkan-20220424-windows.zip"
-ENGINE_DIR = "engine"
+ENGINE_DIR = os.path.join(SCRIPT_DIR, "engine")
 ENGINE_EXE = os.path.join(ENGINE_DIR, "realesrgan-ncnn-vulkan.exe")
 
 def is_engine_installed():

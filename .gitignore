@@ -1,8 +1,12 @@
 venv/
 __pycache__/
 engine/
-"Video Project/"
+engines/
+build/
+dist/
+*.spec
 *.jpg
+*.jpeg
 *.png
 *.webp
 *.mp4
